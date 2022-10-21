@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+It is a Rust version originating from [`Near-NextJS-Template`](https://github.com/aimensahnoun/Near-NextJS-Template) which is based on smart contracts written in assembly script.
+
 ## Getting Started
 
 First, run the development server:
