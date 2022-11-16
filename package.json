@@ -1,0 +1,23 @@
+{
+  "name": "near-nextjs-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "lint": "next lint",
+    "build": "next build && npm run build:contract",
+    "build:contract": "cd contract && rustup target add wasm32-unknown-unknown && cargo build --all --target wasm32-unknown-unknown --release",
+    "deploy": "npm run build:contract && near dev-deploy ./contract/target/wasm32-unknown-unknown/release/near-nextjs-template.wasm",
+    "start": "npm run deploy && echo The app is starting! It will automatically open in your browser when ready"
+  },
+  "dependencies": {
+    "eslint": "8.27.0",
+    "eslint-config-next": "13.0.3",
+    "near-api-js": "^1.1.0",
+    "near-sdk-as": "^3.2.3",
+    "next": "13.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "^3.2.4"
+  }
+}
